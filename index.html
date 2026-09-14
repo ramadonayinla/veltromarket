@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veltro Market - Worldwide E-Commerce & Dropshipping</title>
+    <title>Veltro Market - Worldwide E-Commerce & Sourcing</title>
     
     <!-- SEO & Search Console -->
     <meta name="description" content="Veltro Market: International Sourcing & Dropshipping. Worldwide shipping to Europe, USA, Asia, and Africa.">
@@ -21,331 +21,76 @@
             --gray-text: #666666;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light-bg); color: var(--dark); }
 
-        body {
-            background-color: var(--light-bg);
-            color: var(--dark);
-        }
-
-        /* Top Bar */
         .top-bar {
-            background-color: #111;
-            color: #fff;
-            font-size: 12px;
-            padding: 6px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            background-color: #111; color: #fff; font-size: 12px; padding: 6px 5%;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;
         }
+        .top-bar-shipping { color: #ff9000; font-weight: bold; }
 
-        .top-bar-shipping {
-            color: #ff9000;
-            font-weight: bold;
-        }
+        header { background-color: #fff; padding: 15px 5%; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .header-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 800; color: var(--primary); text-decoration: none; }
 
-        /* Header */
-        header {
-            background-color: #fff;
-            padding: 15px 5%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+        .search-box { flex: 1; max-width: 600px; display: flex; border: 2px solid var(--primary); border-radius: 25px; overflow: hidden; }
+        .search-box input { width: 100%; padding: 10px 15px; border: none; outline: none; }
+        .search-box button { background-color: var(--primary); color: white; border: none; padding: 0 20px; cursor: pointer; font-weight: bold; }
 
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        .nav-categories { background-color: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 10px 5%; overflow-x: auto; white-space: nowrap; }
+        .nav-categories ul { display: flex; list-style: none; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        .nav-categories a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: 600; }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+        .hero { background: linear-gradient(135deg, #ff6a00 0%, #ff9000 100%); color: white; padding: 30px 5%; text-align: center; margin-bottom: 20px; }
 
-        .search-box {
-            flex: 1;
-            max-width: 600px;
-            display: flex;
-            border: 2px solid var(--primary);
-            border-radius: 25px;
-            overflow: hidden;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px 40px 15px; }
 
-        .search-box input {
-            width: 100%;
-            padding: 10px 15px;
-            border: none;
-            outline: none;
-            font-size: 14px;
-        }
-
-        .search-box button {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 0 20px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .search-box button:hover {
-            background-color: var(--primary-hover);
-        }
-
-        /* Navigation Categories */
-        .nav-categories {
-            background-color: #fff;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: 10px 5%;
-            overflow-x: auto;
-            white-space: nowrap;
-        }
-
-        .nav-categories ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .nav-categories a {
-            text-decoration: none;
-            color: var(--dark);
-            font-size: 14px;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
-
-        .nav-categories a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Banner */
-        .hero {
-            background: linear-gradient(135deg, #ff6a00 0%, #ff9000 100%);
-            color: white;
-            padding: 40px 5%;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        /* Shipping Features */
-        .shipping-features {
-            max-width: 1200px;
-            margin: 0 auto 25px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            padding: 0 15px;
-        }
-
-        .feature-box {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid var(--border);
-            font-size: 13px;
-        }
-
-        .feature-box strong {
-            display: block;
-            font-size: 15px;
-            margin-bottom: 4px;
-            color: var(--primary);
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px 40px 15px;
-        }
-
-        .section-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* Order Tracking Box */
+        .tracking-section { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 30px; }
+        .tracking-form { display: flex; gap: 10px; margin-top: 10px; }
+        .tracking-form input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 6px; }
+        .tracking-form button { background-color: var(--dark); color: #fff; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; }
+        .tracking-result { display: none; padding: 15px; background-color: #f9f9f9; border-left: 4px solid var(--primary); margin-top: 10px; }
 
         /* Product Grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 15px;
-        }
+        .section-title { font-size: 20px; margin-bottom: 15px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; }
+        .product-card { background-color: #fff; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-img { width: 100%; height: 180px; object-fit: cover; }
+        .product-info { padding: 12px; flex: 1; display: flex; flex-direction: column; }
+        .product-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+        .product-price { font-size: 18px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .product-vat { font-size: 10px; color: var(--gray-text); margin-bottom: 12px; }
 
-        .product-card {
-            background-color: #fff;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-        }
+        .btn-pay { background-color: var(--primary); color: white; border: none; padding: 10px; border-radius: 6px; font-weight: 700; cursor: pointer; margin-bottom: 5px; }
+        .btn-whatsapp { background-color: transparent; color: #666; border: 1px solid var(--border); text-decoration: none; text-align: center; padding: 8px; border-radius: 6px; font-size: 12px; display: block; }
 
-        .product-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+        /* Modal Payment Styling */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-content { background: #fff; padding: 25px; border-radius: 10px; max-width: 500px; width: 90%; position: relative; }
+        .close-btn { position: absolute; top: 10px; right: 15px; font-size: 20px; cursor: pointer; font-weight: bold; }
+        .bank-details { background: #f8f9fa; padding: 15px; border-radius: 6px; margin-top: 10px; font-size: 13px; border: 1px solid #e2e8f0; }
 
-        .badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #ff3b30;
-            color: white;
-            font-size: 11px;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }
-
-        .product-img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background-color: #f9f9f9;
-        }
-
-        .product-info {
-            padding: 12px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .product-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 8px;
-            line-height: 1.3;
-            height: 36px;
-            overflow: hidden;
-        }
-
-        .product-price {
-            font-size: 18px;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .product-vat {
-            font-size: 10px;
-            color: var(--gray-text);
-            margin-bottom: 4px;
-        }
-
-        .product-moq {
-            font-size: 11px;
-            color: var(--gray-text);
-            margin-bottom: 10px;
-        }
-
-        .rating {
-            font-size: 12px;
-            color: #ffb400;
-            margin-bottom: 12px;
-        }
-
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            text-decoration: none;
-            text-align: center;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 13px;
-            display: block;
-            transition: background 0.2s;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1eb954;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1e1e1e;
-            color: #aaa;
-            padding: 30px 5%;
-            font-size: 13px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 600px) {
-            .header-container {
-                flex-direction: column;
-            }
-            .search-box {
-                width: 100%;
-            }
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-        }
+        footer { background-color: #1e1e1e; color: #aaa; padding: 30px 5%; font-size: 13px; text-align: center; margin-top: 40px; }
+        footer a { color: #fff; text-decoration: none; margin: 0 8px; }
     </style>
 </head>
 <body>
 
     <!-- Top Bar -->
     <div class="top-bar">
-        <span>⚡ Veltro Market - Global Sourcing Platform</span>
-        <span class="top-bar-shipping">✈️ Weltweiter Versand: Europa | USA | Asien | Afrika</span>
-        <span>WhatsApp: +229 01 68 51 95 38</span>
+        <span>⚡ Veltro Market - Global Sourcing & Payment</span>
+        <span class="top-bar-shipping">✈️ Express-Versand weltweit verfügbar!</span>
+        <span>Support: +229 01 68 51 95 38</span>
     </div>
 
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">
-                <span>⚡ VELTRO MARKET</span>
-            </a>
+            <a href="#" class="logo">⚡ VELTRO MARKET</a>
             <div class="search-box">
-                <input type="text" placeholder="Produkte suchen / Worldwide sourcing...">
+                <input type="text" placeholder="Produkte suchen...">
                 <button>Suchen</button>
             </div>
         </div>
@@ -357,134 +102,123 @@
             <li><a href="#">🔥 Bestseller</a></li>
             <li><a href="#">📱 Elektronik</a></li>
             <li><a href="#">👗 Mode & Bekleidung</a></li>
-            <li><a href="#">🏠 Haushalt & Küche</a></li>
-            <li><a href="#">💄 Schönheit & Pflege</a></li>
-            <li><a href="#">🌍 Internationaler Versand</a></li>
+            <li><a href="#">📦 Bestellverfolgung</a></li>
         </ul>
     </nav>
 
-    <!-- Banner Hero -->
+    <!-- Hero Banner -->
     <section class="hero">
-        <h1>Sourcing & Großbestellungen mit Veltro Market</h1>
-        <p>Kaufen Sie direkt bei Lieferanten und bestellen Sie per WhatsApp – Lieferung weltweit!</p>
+        <h1>Sourcing, Internationale Zahlung & Verfolgung</h1>
+        <p>Bezahlen Sie per EUR-Virement (SEPA), US-Konto (ACH/Wire) oder WhatsApp – weltweite Lieferung!</p>
     </section>
 
-    <!-- Lieferzonen -->
-    <div class="shipping-features">
-        <div class="feature-box">
-            <strong>🇪🇺 Europa</strong>
-            Express-Lieferung per DHL / FedEx
-        </div>
-        <div class="feature-box">
-            <strong>🇺🇸 USA & Kanada</strong>
-            Zollabwicklung & Direktversand
-        </div>
-        <div class="feature-box">
-            <strong>🌍 Afrika & Asien</strong>
-            Fracht- & Cargo-Optionen verfügbar
-        </div>
-    </div>
-
-    <!-- Main Content -->
     <main class="container">
-        <div class="section-title">
-            <h2>Beliebte Produkte</h2>
-        </div>
 
+        <!-- Tracking Section -->
+        <section class="tracking-section">
+            <h3>📦 Bestellverfolgung (Suivi de commande)</h3>
+            <p style="font-size: 13px; color: #666;">Geben Sie Ihre Bestellnummer ein (z. B. <strong>VM-1024</strong>):</p>
+            <div class="tracking-form">
+                <input type="text" id="trackingInput" placeholder="Bestellnummer eingeben...">
+                <button onclick="checkTracking()">Suchen</button>
+            </div>
+            <div id="trackingResult" class="tracking-result"></div>
+        </section>
+
+        <!-- Product Grid -->
+        <div class="section-title"><h2>Beliebte Produkte</h2></div>
         <div class="product-grid">
 
-            <!-- Product 1 -->
             <div class="product-card">
-                <span class="badge">-20%</span>
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Kabelloser Kopfhörer" class="product-img">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" class="product-img">
                 <div class="product-info">
                     <div class="product-title">Hi-Fi Bluetooth-Kopfhörer mit Geräuschunterdrückung</div>
                     <div class="product-price">19,99 € / $21.50</div>
-                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
-                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
-                    <div class="rating">★ ★ ★ ★ ☆ (4.8)</div>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20den%20Bluetooth-Kopfhörer%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
-                        Per WhatsApp bestellen
-                    </a>
+                    <div class="product-vat">inkl. MwSt. zzgl. Versand</div>
+                    <button class="btn-pay" onclick="openPaymentModal('Hi-Fi Bluetooth-Kopfhörer', '19,99 € / $21.50')">Jetzt Bezahlen (IBAN Malta / US)</button>
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20Bestellung%20Hi-Fi%20Kopfhörer" class="btn-whatsapp" target="_blank">WhatsApp Bestellung</a>
                 </div>
             </div>
 
-            <!-- Product 2 -->
             <div class="product-card">
-                <span class="badge">TOP</span>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smartwatch" class="product-img">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" class="product-img">
                 <div class="product-info">
                     <div class="product-title">Wasserdichte Sport-Smartwatch Fitness Tracker</div>
                     <div class="product-price">29,99 € / $32.00</div>
-                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
-                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
-                    <div class="rating">★ ★ ★ ★ ★ (5.0)</div>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20Smartwatch%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
-                        Per WhatsApp bestellen
-                    </a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sportschuhe" class="product-img">
-                <div class="product-info">
-                    <div class="product-title">Moderne Herren & Damen Sportschuhe Streamline</div>
-                    <div class="product-price">24,99 € / $27.00</div>
-                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
-                    <div class="product-moq">Mindestbestellmenge: 1 Paar</div>
-                    <div class="rating">★ ★ ★ ★ ☆ (4.6)</div>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20Sportschuhe%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
-                        Per WhatsApp bestellen
-                    </a>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-                <span class="badge">-15%</span>
-                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500" alt="TWS Ohrhörer" class="product-img">
-                <div class="product-info">
-                    <div class="product-title">Kabellose TWS Ohrhörer mit Ladecase</div>
-                    <div class="product-price">14,99 € / $16.00</div>
-                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
-                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
-                    <div class="rating">★ ★ ★ ★ ☆ (4.7)</div>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20TWS%20Ohrhörer%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
-                        Per WhatsApp bestellen
-                    </a>
+                    <div class="product-vat">inkl. MwSt. zzgl. Versand</div>
+                    <button class="btn-pay" onclick="openPaymentModal('Sport-Smartwatch', '29,99 € / $32.00')">Jetzt Bezahlen (IBAN Malta / US)</button>
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20Bestellung%20Smartwatch" class="btn-whatsapp" target="_blank">WhatsApp Bestellung</a>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <!-- Modal Modal Zahlungsarten -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closePaymentModal()">&times;</span>
+            <h3 id="modalProductName">Produkt bezahlen</h3>
+            <p id="modalProductPrice" style="font-weight:bold; color:var(--primary); margin-bottom:15px;"></p>
+            
+            <p style="font-size:13px; margin-bottom:10px;">Wählen Sie Ihre Zahlungsmethode für die Überweisung:</p>
+            
+            <!-- SEPA Europe (Malta) -->
+            <div class="bank-details">
+                <strong>🇪🇺 Europa - SEPA Überweisung (EUR)</strong><br>
+                Land: Malta<br>
+                IBAN: <strong>MT40CFTE28004000000000006771879</strong><br>
+                Empfänger: <em>Veltro Market</em>
+            </div>
+
+            <!-- US Account -->
+            <div class="bank-details">
+                <strong>🇺🇸 USA - Konto (USD)</strong><br>
+                Routing Number (ABA): <strong>101019644</strong><br>
+                Kontonummer / Account Number: <strong>213661504105</strong><br>
+                Empfänger: <em>Veltro Market</em>
+            </div>
+
+            <p style="font-size:11px; color:#666; margin-top:15px;">
+                * Nach der Überweisung senden Sie bitte die Zahlungsbestätigung per WhatsApp (+229 01 68 51 95 38) zur schnellen Bearbeitung und Bestellvalidierung.
+            </p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Veltro Market. Alle Rechte vorbehalten.</p>
-        <p>Weltweiter Versand: Europa | USA | Asien | Afrika</p>
-        <p style="margin-top: 10px;">
-            <a href="/sitemap.xml">Sitemap</a> | 
-            <a href="#">Impressum</a> | 
-            <a href="#">Datenschutz</a>
-        </p>
+        <p><a href="/sitemap.xml">Sitemap</a> | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
     </footer>
 
-    <!-- Script ipapi (Géolocalisation automatique) -->
+    <!-- Scripts -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch('https://ipapi.co/json/')
-                .then(response => response.json())
-                .then(data => {
-                    const countryName = data.country_name;
-                    const shippingElement = document.querySelector('.top-bar-shipping');
-                    if (shippingElement && countryName) {
-                        shippingElement.innerHTML = `✈️ Express-Versand nach <strong>${countryName}</strong> verfügbar!`;
-                    }
-                })
-                .catch(error => console.error('Geolocalisation ipapi error:', error));
+                .then(r => r.json())
+                .then(d => {
+                    const el = document.querySelector('.top-bar-shipping');
+                    if (el && d.country_name) el.innerHTML = `✈️ Express-Versand nach <strong>${d.country_name}</strong> verfügbar!`;
+                });
         });
-    </script>
 
+        function checkTracking() {
+            const id = document.getElementById('trackingInput').value.trim();
+            const res = document.getElementById('trackingResult');
+            if(!id) { res.style.display='block'; res.innerHTML='<span style="color:red;">Bitte Bestellnummer eingeben.</span>'; return; }
+            res.style.display='block';
+            res.innerHTML = `<strong>Bestell-ID:</strong> ${id}<br><strong>Status:</strong> <span style="color:green; font-weight:bold;">In Bearbeitung 🚚</span><br>Lieferung: 3 - 5 Werktage`;
+        }
+
+        function openPaymentModal(name, price) {
+            document.getElementById('modalProductName').innerText = name;
+            document.getElementById('modalProductPrice').innerText = 'Preis: ' + price;
+            document.getElementById('paymentModal').style.display = 'flex';
+        }
+
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
