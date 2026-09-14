@@ -1,12 +1,12 @@
-html_code = """<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veltro Market - Plateforme E-commerce & Dropshipping</title>
+    <title>Veltro Market - Worldwide E-Commerce & Dropshipping</title>
     
     <!-- SEO & Search Console -->
-    <meta name="description" content="Veltro Market : Votre destination e-commerce et dropshipping. Trouvez les meilleurs produits aux meilleurs prix.">
+    <meta name="description" content="Veltro Market: International Sourcing & Dropshipping. Worldwide shipping to Europe, USA, Asia, and Africa.">
     <meta name="google-site-verification" content="zSEqsw3O0_zcJndA4KzIZvPlh9JjR4ddF8JtYML4g2c" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
@@ -42,6 +42,13 @@ html_code = """<!DOCTYPE html>
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar-shipping {
+            color: #ff9000;
+            font-weight: bold;
         }
 
         /* Header */
@@ -104,7 +111,7 @@ html_code = """<!DOCTYPE html>
             background-color: var(--primary-hover);
         }
 
-        /* Categories Bar */
+        /* Navigation Categories */
         .nav-categories {
             background-color: #fff;
             border-top: 1px solid var(--border);
@@ -140,12 +147,38 @@ html_code = """<!DOCTYPE html>
             color: white;
             padding: 40px 5%;
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
             font-size: 28px;
             margin-bottom: 10px;
+        }
+
+        /* Shipping Features */
+        .shipping-features {
+            max-width: 1200px;
+            margin: 0 auto 25px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            padding: 0 15px;
+        }
+
+        .feature-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+            font-size: 13px;
+        }
+
+        .feature-box strong {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: var(--primary);
         }
 
         /* Main Container */
@@ -230,6 +263,12 @@ html_code = """<!DOCTYPE html>
             margin-bottom: 4px;
         }
 
+        .product-vat {
+            font-size: 10px;
+            color: var(--gray-text);
+            margin-bottom: 4px;
+        }
+
         .product-moq {
             font-size: 11px;
             color: var(--gray-text);
@@ -272,9 +311,10 @@ html_code = """<!DOCTYPE html>
         footer a {
             color: #fff;
             text-decoration: none;
+            margin: 0 8px;
         }
 
-        /* Mobile adjustments */
+        /* Mobile Responsive */
         @media (max-width: 600px) {
             .header-container {
                 flex-direction: column;
@@ -291,108 +331,127 @@ html_code = """<!DOCTYPE html>
 </head>
 <body>
 
-    <!-- Barre supérieure -->
+    <!-- Top Bar -->
     <div class="top-bar">
-        <span>Veltro Market - Sourcing & Dropshipping International</span>
-        <span>Service Client WhatsApp: +229 01 68 51 95 38</span>
+        <span>⚡ Veltro Market - Global Sourcing Platform</span>
+        <span class="top-bar-shipping">✈️ Weltweiter Versand: Europa | USA | Asien | Afrika</span>
+        <span>WhatsApp: +229 01 68 51 95 38</span>
     </div>
 
-    <!-- En-tête principal -->
+    <!-- Header -->
     <header>
         <div class="header-container">
             <a href="#" class="logo">
                 <span>⚡ VELTRO MARKET</span>
             </a>
-            
-            <!-- Barre de recherche -->
             <div class="search-box">
-                <input type="text" placeholder="Rechercher des produits, marques, fournisseurs...">
-                <button>Rechercher</button>
+                <input type="text" placeholder="Produkte suchen / Worldwide sourcing...">
+                <button>Suchen</button>
             </div>
         </div>
     </header>
 
-    <!-- Navigation par catégories -->
+    <!-- Navigation -->
     <nav class="nav-categories">
         <ul>
-            <li><a href="#">🔥 Meilleures Ventes</a></li>
-            <li><a href="#">📱 Électronique</a></li>
-            <li><a href="#">👗 Mode & Vetements</a></li>
-            <li><a href="#">🏠 Maison & Cuisine</a></li>
-            <li><a href="#">💄 Beauté & Soins</a></li>
-            <li><a href="#">⚡ Vente en Gros / Dropshipping</a></li>
+            <li><a href="#">🔥 Bestseller</a></li>
+            <li><a href="#">📱 Elektronik</a></li>
+            <li><a href="#">👗 Mode & Bekleidung</a></li>
+            <li><a href="#">🏠 Haushalt & Küche</a></li>
+            <li><a href="#">💄 Schönheit & Pflege</a></li>
+            <li><a href="#">🌍 Internationaler Versand</a></li>
         </ul>
     </nav>
 
-    <!-- Banner -->
+    <!-- Banner Hero -->
     <section class="hero">
-        <h1>Sourcing & Commandes en Gros avec Veltro Market</h1>
-        <p>Achetez directement auprès des fournisseurs et recevez vos commandes via WhatsApp</p>
+        <h1>Sourcing & Großbestellungen mit Veltro Market</h1>
+        <p>Kaufen Sie direkt bei Lieferanten und bestellen Sie per WhatsApp – Lieferung weltweit!</p>
     </section>
 
-    <!-- Grille de Produits -->
+    <!-- Lieferzonen -->
+    <div class="shipping-features">
+        <div class="feature-box">
+            <strong>🇪🇺 Europa</strong>
+            Express-Lieferung per DHL / FedEx
+        </div>
+        <div class="feature-box">
+            <strong>🇺🇸 USA & Kanada</strong>
+            Zollabwicklung & Direktversand
+        </div>
+        <div class="feature-box">
+            <strong>🌍 Afrika & Asien</strong>
+            Fracht- & Cargo-Optionen verfügbar
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <main class="container">
         <div class="section-title">
-            <h2>Produits Tendance</h2>
+            <h2>Beliebte Produkte</h2>
         </div>
 
         <div class="product-grid">
 
-            <!-- Produit 1 -->
+            <!-- Product 1 -->
             <div class="product-card">
                 <span class="badge">-20%</span>
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Casque Sans Fil" class="product-img">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Kabelloser Kopfhörer" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">Casque Bluetooth Hi-Fi Réduction de Bruit</div>
-                    <div class="product-price">12 500 FCFA</div>
-                    <div class="product-moq">Min. commande : 1 pièce</div>
+                    <div class="product-title">Hi-Fi Bluetooth-Kopfhörer mit Geräuschunterdrückung</div>
+                    <div class="product-price">19,99 € / $21.50</div>
+                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
+                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
                     <div class="rating">★ ★ ★ ★ ☆ (4.8)</div>
-                    <a href="https://wa.me/2290168519538?text=Bonjour,%20je%20souhaite%20commander%20le%20Casque%20Bluetooth%20Hi-Fi" class="btn-whatsapp" target="_blank">
-                        Commander via WhatsApp
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20den%20Bluetooth-Kopfhörer%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
+                        Per WhatsApp bestellen
                     </a>
                 </div>
             </div>
 
-            <!-- Produit 2 -->
+            <!-- Product 2 -->
             <div class="product-card">
                 <span class="badge">TOP</span>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Montre Connectée" class="product-img">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smartwatch" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">Montre Connectée Smartwatch Sport Waterproof</div>
-                    <div class="product-price">18 000 FCFA</div>
-                    <div class="product-moq">Min. commande : 1 pièce</div>
+                    <div class="product-title">Wasserdichte Sport-Smartwatch Fitness Tracker</div>
+                    <div class="product-price">29,99 € / $32.00</div>
+                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
+                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
                     <div class="rating">★ ★ ★ ★ ★ (5.0)</div>
-                    <a href="https://wa.me/2290168519538?text=Bonjour,%20je%20souhaite%20commander%20la%20Montre%20Connectée" class="btn-whatsapp" target="_blank">
-                        Commander via WhatsApp
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20Smartwatch%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
+                        Per WhatsApp bestellen
                     </a>
                 </div>
             </div>
 
-            <!-- Produit 3 -->
+            <!-- Product 3 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Baskets Sport" class="product-img">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sportschuhe" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">Baskets de Sport Streamline Design Moderne</div>
-                    <div class="product-price">15 000 FCFA</div>
-                    <div class="product-moq">Min. commande : 1 paire</div>
+                    <div class="product-title">Moderne Herren & Damen Sportschuhe Streamline</div>
+                    <div class="product-price">24,99 € / $27.00</div>
+                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
+                    <div class="product-moq">Mindestbestellmenge: 1 Paar</div>
                     <div class="rating">★ ★ ★ ★ ☆ (4.6)</div>
-                    <a href="https://wa.me/2290168519538?text=Bonjour,%20je%20souhaite%20commander%20les%20Baskets%20de%20Sport" class="btn-whatsapp" target="_blank">
-                        Commander via WhatsApp
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20Sportschuhe%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
+                        Per WhatsApp bestellen
                     </a>
                 </div>
             </div>
 
-            <!-- Produit 4 -->
+            <!-- Product 4 -->
             <div class="product-card">
                 <span class="badge">-15%</span>
-                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500" alt="Écouteurs TWS" class="product-img">
+                <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500" alt="TWS Ohrhörer" class="product-img">
                 <div class="product-info">
-                    <div class="product-title">Écouteurs Sans Fil TWS avec Boîtier de Charge</div>
-                    <div class="product-price">8 500 FCFA</div>
-                    <div class="product-moq">Min. commande : 1 pièce</div>
+                    <div class="product-title">Kabellose TWS Ohrhörer mit Ladecase</div>
+                    <div class="product-price">14,99 € / $16.00</div>
+                    <div class="product-vat">inkl. MwSt. zzgl. internationaler Versand</div>
+                    <div class="product-moq">Mindestbestellmenge: 1 Stück</div>
                     <div class="rating">★ ★ ★ ★ ☆ (4.7)</div>
-                    <a href="https://wa.me/2290168519538?text=Bonjour,%20je%20souhaite%20commander%20les%20Écouteurs%20TWS" class="btn-whatsapp" target="_blank">
-                        Commander via WhatsApp
+                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20möchte%20die%20TWS%20Ohrhörer%20bestellen%20(Versand%20weltweit)" class="btn-whatsapp" target="_blank">
+                        Per WhatsApp bestellen
                     </a>
                 </div>
             </div>
@@ -400,17 +459,32 @@ html_code = """<!DOCTYPE html>
         </div>
     </main>
 
-    <!-- Pied de page -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Veltro Market. Tous droits réservés.</p>
-        <p><a href="/sitemap.xml">Sitemap</a> | Propulsé par Cloudflare Pages</p>
+        <p>&copy; 2026 Veltro Market. Alle Rechte vorbehalten.</p>
+        <p>Weltweiter Versand: Europa | USA | Asien | Afrika</p>
+        <p style="margin-top: 10px;">
+            <a href="/sitemap.xml">Sitemap</a> | 
+            <a href="#">Impressum</a> | 
+            <a href="#">Datenschutz</a>
+        </p>
     </footer>
+
+    <!-- Script ipapi (Géolocalisation automatique) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    const countryName = data.country_name;
+                    const shippingElement = document.querySelector('.top-bar-shipping');
+                    if (shippingElement && countryName) {
+                        shippingElement.innerHTML = `✈️ Express-Versand nach <strong>${countryName}</strong> verfügbar!`;
+                    }
+                })
+                .catch(error => console.error('Geolocalisation ipapi error:', error));
+        });
+    </script>
 
 </body>
 </html>
-"""
-
-with open("index.html", "w", encoding="utf-8") as f:
-    f.write(html_code)
-
-print("Fichier index.html généré avec succès.")
