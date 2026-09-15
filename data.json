@@ -1,0 +1,32 @@
+{
+  "suppliers": [
+    {
+      "name": "Alibaba Direct Sourcing",
+      "region": "Asien (China)",
+      "desc": "Zertifizierter Hersteller für Silikon- und Tierzubehörartikel.",
+      "delay": "5 - 8 Werktage (Express nach DE)"
+    },
+    {
+      "name": "CJ Dropshipping Global",
+      "region": "Global & EU Lager",
+      "desc": "Spezialisiert auf schnellen Dropshipping-Versand für Haustierbedarf.",
+      "delay": "3 - 5 Werktage nach Deutschland"
+    }
+  ],
+  "products": [
+    {
+      "id": "PET-001",
+      "title": "Faltbarer Reise-Napf aus Lebensmittel-Silikon für Hunde",
+      "price": "9,99 €",
+      "supplier": "Alibaba Direct Sourcing",
+      "image": "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0?w=500"
+    },
+    {
+      "id": "PET-002",
+      "title": "Kauschuh & Kau-Spielzeug aus Naturkautschuk für Hunde",
+      "price": "12,99 €",
+      "supplier": "CJ Dropshipping Global",
+      "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500"
+    }
+  ]
+}
