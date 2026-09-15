@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veltro Market - Global Sourcing, E-Commerce & Secure Payments</title>
+    <title>Veltro Market - Exklusiver Versand in Deutschland & Sicherer Direktbezug</title>
     
     <!-- SEO & Search Console -->
-    <meta name="description" content="Veltro Market: International Sourcing, Dropshipping & Secure Global Payments. Worldwide shipping to Europe, USA, Asia, and Africa.">
+    <meta name="description" content="Veltro Market: Qualitativ hochwertige Produkte mit exklusivem Express-Versand innerhalb Deutschlands. Sichere Zahlungen und direkter Lieferantenservice.">
     <meta name="google-site-verification" content="zSEqsw3O0_zcJndA4KzIZvPlh9JjR4ddF8JtYML4g2c" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-    <!-- Style CSS Professionnel -->
+    <!-- Style CSS -->
     <style>
         :root {
             --primary: #ff6a00;
@@ -64,6 +64,19 @@
         .trust-text h4 { font-size: 13px; font-weight: 700; color: var(--dark); }
         .trust-text p { font-size: 11px; color: var(--gray-text); }
 
+        /* Section Fournisseurs */
+        .suppliers-section { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 25px; margin-bottom: 40px; }
+        .suppliers-header { margin-bottom: 20px; }
+        .suppliers-header h3 { font-size: 18px; font-weight: 700; color: var(--dark); }
+        .suppliers-header p { font-size: 13px; color: var(--gray-text); }
+        
+        .suppliers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+        .supplier-card { background: #f8fafc; border: 1px dashed #cbd5e1; padding: 15px; border-radius: 8px; }
+        .supplier-card h4 { font-size: 14px; font-weight: 700; color: #1e293b; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between; }
+        .supplier-tag { font-size: 10px; background: #3b82f6; color: #fff; padding: 2px 6px; border-radius: 4px; }
+        .supplier-card p { font-size: 12px; color: #64748b; margin-bottom: 8px; }
+        .supplier-meta { font-size: 11px; font-weight: 600; color: var(--primary); }
+
         /* Tracking Section */
         .tracking-section { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 25px; margin-bottom: 40px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
         .tracking-form { display: flex; gap: 10px; margin-top: 12px; }
@@ -87,10 +100,10 @@
 
         .btn-order { background-color: var(--primary); color: white; border: none; padding: 12px; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; transition: background 0.2s; }
         .btn-order:hover { background-color: var(--primary-hover); }
-        .btn-whatsapp { background-color: transparent; color: #475569; border: 1px solid var(--border); text-decoration: none; text-align: center; padding: 8px; border-radius: 6px; font-size: 12px; display: block; margin-top: 8px; font-weight: 500; }
-        .btn-whatsapp:hover { background-color: #f8fafc; }
+        .btn-support-wa { background-color: #25d366; color: white; text-decoration: none; text-align: center; padding: 8px; border-radius: 6px; font-size: 12px; display: block; margin-top: 8px; font-weight: 600; }
+        .btn-support-wa:hover { opacity: 0.9; }
 
-        /* Secure Checkout Modal */
+        /* Modal */
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.7); z-index: 1000; justify-content: center; align-items: center; overflow-y: auto; padding: 20px; }
         .modal-content { background: #fff; padding: 30px; border-radius: 12px; max-width: 500px; width: 100%; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
         .close-btn { position: absolute; top: 15px; right: 20px; font-size: 22px; cursor: pointer; color: var(--gray-text); }
@@ -100,16 +113,14 @@
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 5px; color: #334155; }
         .form-group input, .form-group select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; outline: none; }
-        .form-group input:focus, .form-group select:focus { border-color: var(--primary); }
 
-        /* Footer Professionnel & Légal */
+        /* Footer */
         footer { background-color: #0f172a; color: #94a3b8; padding: 40px 5% 20px 5%; font-size: 13px; margin-top: 60px; }
         .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 30px; }
         .footer-col h3 { color: #fff; font-size: 15px; margin-bottom: 15px; font-weight: 600; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 8px; }
-        .footer-col a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
-        .footer-col a:hover { color: #fff; }
+        .footer-col a { color: #94a3b8; text-decoration: none; }
         .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid #1e293b; padding-top: 20px; text-align: center; font-size: 12px; color: #64748b; }
     </style>
 </head>
@@ -117,17 +128,17 @@
 
     <!-- Top Bar -->
     <div class="top-bar">
-        <span>🔒 Gesicherte SSL-Verbindung & Datenschutzkonform (GDPR / CCPA)</span>
-        <span class="top-bar-shipping">✈️ Weltweiter Express-Versand (Europa, USA, Asien, Afrika)</span>
-        <span>Support 24/7: +229 01 68 51 95 38</span>
+        <span>🔒 Gesicherte SSL-Verbindung & DSGVO-konform</span>
+        <span class="top-bar-shipping">🇩🇪 Exklusiver Versand nur innerhalb Deutschlands (DHL / Hermès)</span>
+        <span>Kundenservice (WhatsApp Support): +229 01 68 51 95 38</span>
     </div>
 
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="#" class="logo">⚡ VELTRO MARKET</a>
+            <a href="#" class="logo">⚡ VELTRO MARKET DE</a>
             <div class="search-box">
-                <input type="text" placeholder="Produkte, SKU oder Kategorie suchen...">
+                <input type="text" placeholder="Produkte, Artikelnummer oder Kategorie suchen...">
                 <button>Suchen</button>
             </div>
         </div>
@@ -136,17 +147,17 @@
     <!-- Navigation -->
     <nav class="nav-categories">
         <ul>
-            <li><a href="#">🔥 Bestseller</a></li>
-            <li><a href="#">📱 High-Tech & Elektronik</a></li>
-            <li><a href="#">🌐 Global Sourcing Hub</a></li>
+            <li><a href="#">🔥 Bestseller Deutschland</a></li>
+            <li><a href="#">📱 Elektronik & High-Tech</a></li>
+            <li><a href="#suppliers">🌐 Verifizierte Lieferanten</a></li>
             <li><a href="#tracking">📦 Sendungsverfolgung</a></li>
         </ul>
     </nav>
 
     <!-- Hero Banner -->
     <header class="hero">
-        <h1>Internationaler Handel & Gesicherter Direktbezug</h1>
-        <p>Bestellen Sie weltweit mit vertrauenswürdigen Zahlungsmodalitäten. Transparente Lieferketten von verifizierten globalen Partnern.</p>
+        <h1>Sicherer Online-Kauf & Direktbezug in Deutschland</h1>
+        <p>Bestellen Sie direkt über unsere Plattform. Ihre Bestellbestätigung und Rechnung werden automatisch per E-Mail und SMS zugestellt. WhatsApp dient ausschließlich dem Kundensupport.</p>
     </header>
 
     <main class="container">
@@ -157,29 +168,40 @@
                 <div class="trust-icon">🛡️</div>
                 <div class="trust-text">
                     <h4>Verschlüsselte Daten</h4>
-                    <p>SSL-geschützte Transaktionen & Kundenschutz</p>
+                    <p>SSL-geschützte Transaktionen & DSGVO</p>
                 </div>
             </div>
             <div class="trust-item">
-                <div class="trust-icon">🤝</div>
+                <div class="trust-icon">📩</div>
                 <div class="trust-text">
-                    <h4>Verifizierte Lieferanten</h4>
-                    <p>Qualitätskontrolle vor internationalem Versand</p>
+                    <h4>Automatische Kaufbelege</h4>
+                    <p>Sofortiger Erhalt per E-Mail & SMS</p>
                 </div>
             </div>
             <div class="trust-item">
                 <div class="trust-icon">💬</div>
                 <div class="trust-text">
-                    <h4>Dedizierter Support</h4>
-                    <p>Re reçu instantané par Email, SMS & WhatsApp</p>
+                    <h4>Kundensupport</h4>
+                    <p>Hilfe & Fragen via WhatsApp Support</p>
                 </div>
             </div>
         </div>
 
+        <!-- Section Lieferanten (Dynamisch aus data.json) -->
+        <section id="suppliers" class="suppliers-section">
+            <div class="suppliers-header">
+                <h3>🌐 Sourcing & Partner-Lieferanten</h3>
+                <p>Transparente Lieferkette für Bestellungen nach Deutschland:</p>
+            </div>
+            <div id="suppliersGrid" class="suppliers-grid">
+                <p style="font-size:13px; color:var(--gray-text);">Lade Lieferanten aus data.json...</p>
+            </div>
+        </section>
+
         <!-- Tracking Section -->
         <section id="tracking" class="tracking-section">
             <h3>📦 Sendungsverfolgung in Echtzeit</h3>
-            <p style="font-size: 13px; color: var(--gray-text); margin-top: 4px;">Geben Sie Ihre eindeutige Bestellnummer ein (z. B. VM-8492), um den Status Ihres Pakets abzurufen:</p>
+            <p style="font-size: 13px; color: var(--gray-text); margin-top: 4px;">Geben Sie Ihre Bestellnummer ein (z. B. VM-8492):</p>
             <div class="tracking-form">
                 <input type="text" id="trackingInput" placeholder="Beispiel: VM-1024">
                 <button onclick="checkTracking()">Status prüfen</button>
@@ -187,40 +209,19 @@
             <div id="trackingResult" class="tracking-result"></div>
         </section>
 
-        <!-- Product Grid -->
+        <!-- Product Grid (Dynamisch aus data.json) -->
         <div class="section-header">
-            <h2>Ausgewählte Produkte & Sourcing Direkt</h2>
-            <span class="supplier-badge">🌍 Partner: Global Logistics Network (EU / US / Asia)</span>
+            <h2>Verfügbare Produkte in Deutschland</h2>
+            <span class="supplier-badge">🇩🇪 Versandadresse: Nur Deutschland</span>
         </div>
         
-        <div class="product-grid">
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" class="product-img" alt="Kopfhörer">
-                <div class="product-info">
-                    <div class="product-title">Hi-Fi Bluetooth-Kopfhörer ANC</div>
-                    <div class="product-price">19,99 € / $21.50</div>
-                    <div class="product-meta">Inkl. MwSt. • Sourcing: Global Tech Hub</div>
-                    <button class="btn-order" onclick="openCheckoutModal('Hi-Fi Bluetooth-Kopfhörer ANC', '19,99 € / $21.50')">Sicher Bestellen</button>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20Frage%20zum%20Produkt%20Hi-Fi%20Kopfhörer" class="btn-whatsapp" target="_blank">Frage per WhatsApp</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" class="product-img" alt="Smartwatch">
-                <div class="product-info">
-                    <div class="product-title">Wasserdichte Sport-Smartwatch</div>
-                    <div class="product-price">29,99 € / $32.00</div>
-                    <div class="product-meta">Inkl. MwSt. • Sourcing: Apex Worldwide</div>
-                    <button class="btn-order" onclick="openCheckoutModal('Wasserdichte Sport-Smartwatch', '29,99 € / $32.00')">Sicher Bestellen</button>
-                    <a href="https://wa.me/2290168519538?text=Hallo,%20Frage%20zum%20Produkt%20Smartwatch" class="btn-whatsapp" target="_blank">Frage per WhatsApp</a>
-                </div>
-            </div>
-
+        <div id="productGrid" class="product-grid">
+            <p style="font-size:13px; color:var(--gray-text);">Lade Produkte aus data.json...</p>
         </div>
+
     </main>
 
-    <!-- Modal Formulaire de Commande Sécurisé -->
+    <!-- Modal Formular (Bestellung in Deutschland) -->
     <div id="checkoutModal" class="modal">
         <div class="modal-content">
             <span class="close-btn" onclick="closeCheckoutModal()">&times;</span>
@@ -230,80 +231,126 @@
             <div class="secure-box">
                 <span>🔒</span>
                 <div>
-                    <strong>Streng vertraulich & Datenschutzkonform:</strong> Ihre Bankdaten werden niemals öffentlich angezeigt. Nach Bestätigung erhalten Sie sofort Ihren Empfangsbeleg per E-Mail, SMS und WhatsApp.
+                    <strong>Streng vertraulich:</strong> Ihre Bestellung wird sofort im System verarbeitet. Die Kaufbestätigung und Zahlungsanweisungen werden direkt per E-Mail und SMS versendet.
                 </div>
             </div>
 
             <form id="orderForm" onsubmit="submitOrder(event)">
                 <div class="form-group">
-                    <label>Vollständiger Name / Volle Anschrift</label>
-                    <input type="text" id="clientName" required placeholder="Max Mustermann">
+                    <label>Vollständiger Name</label>
+                    <input type="text" id="clientName" required placeholder="z. B. Max Mustermann">
                 </div>
                 <div class="form-group">
-                    <label>E-Mail-Adresse (für den elektronischen Beleg)</label>
-                    <input type="email" id="clientEmail" required placeholder="name@example.com">
+                    <label>E-Mail-Adresse (für den elektronischen Kaufbeleg)</label>
+                    <input type="email" id="clientEmail" required placeholder="name@beispiel.de">
                 </div>
                 <div class="form-group">
-                    <label>WhatsApp / Mobiltelefonnummer (für SMS & WhatsApp Beleg)</label>
-                    <input type="text" id="clientPhone" required placeholder="+49 ... / +1 ... / +229 ...">
+                    <label>Mobiltelefonnummer (für Bestätigung per SMS)</label>
+                    <input type="text" id="clientPhone" required placeholder="+49 170 1234567">
                 </div>
                 <div class="form-group">
-                    <label>Lieferadresse (Straße, Hausnummer, PLZ, Ort, Land)</label>
-                    <input type="text" id="clientAddress" required placeholder="Vollständige Lieferadresse...">
+                    <label>Lieferadresse in Deutschland (Straße, Nr., PLZ, Ort)</label>
+                    <input type="text" id="clientAddress" required placeholder="Musterstraße 1, 10115 Berlin, Deutschland">
                 </div>
                 <div class="form-group">
-                    <label>Gewünschte sichere Zahlungsart</label>
+                    <label>Lieferland</label>
+                    <input type="text" value="Deutschland (Exklusiv)" disabled style="background-color: #e2e8f0; font-weight: bold;">
+                </div>
+                <div class="form-group">
+                    <label>Sichere Zahlungsart</label>
                     <select id="paymentMethod">
-                        <option value="SEPA">🇪🇺 Europa - SEPA Überweisung (EUR - IBAN)</option>
-                        <option value="US">🇺🇸 USA / International - Bank Wire / ACH (USD)</option>
+                        <option value="SEPA">🇪🇺 SEPA-Banküberweisung (EUR / IBAN)</option>
+                        <option value="Klarna_Wire">💳 Direktüberweisung / Vorkasse</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-order" style="margin-top: 5px;">Bestellung verbindlich anfragen</button>
+                <button type="submit" class="btn-order">Bestellung jetzt verbindlich bestätigen</button>
             </form>
 
             <div id="orderSuccess" style="display:none; text-align:center; padding: 20px 0;">
-                <h4 style="color: var(--success); margin-bottom: 10px; font-size: 18px;">✅ Bestellung & Reçus envoyés avec succès !</h4>
+                <h4 style="color: var(--success); margin-bottom: 10px; font-size: 18px;">✅ Bestellung erfolgreich erfasst!</h4>
                 <p id="generatedId" style="font-size: 14px; margin-bottom: 12px; font-weight: 600;"></p>
-                <p style="font-size: 13px; color: var(--gray-text); line-height: 1.4; margin-bottom: 15px;">
-                    Un reçu numérique a été expédié à votre adresse e-mail, par SMS, et sur votre WhatsApp.
+                <p style="font-size: 13px; color: var(--gray-text); margin-bottom: 15px;">
+                    Der digitale Kaufbeleg wurde an Ihre <strong>E-Mail-Adresse</strong> und per <strong>SMS</strong> versendet.
                 </p>
-                <a id="whatsappReceiptLink" href="#" target="_blank" style="display: inline-block; background-color: #25d366; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 13px;">📲 Finaliser / Ouvrir sur WhatsApp</a>
+                <div style="background: #f1f5f9; padding: 10px; border-radius: 6px; font-size: 12px; margin-bottom: 15px;">
+                    Benötigen Sie Hilfe oder Unterstützung zu dieser Bestellung?
+                </div>
+                <a id="whatsappSupportLink" href="#" target="_blank" class="btn-support-wa">💬 Kundenservice via WhatsApp kontaktieren</a>
             </div>
         </div>
     </div>
 
-    <!-- Footer Légal & Professionnel -->
+    <!-- Footer -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h3>Veltro Market</h3>
-                <p style="font-size: 12px; color: #94a3b8; margin-bottom: 10px;">Ihr globaler Partner für sicheren Handel, Sourcing und weltweite Logistiklösungen.</p>
-                <p style="font-size: 12px; color: #94a3b8;">Support: support@veltromarket.workers.dev</p>
+                <h3>Veltro Market Deutschland</h3>
+                <p style="font-size: 12px; color: #94a3b8; margin-bottom: 10px;">Ihr vertrauenswürdiger Online-Shop für Exklusivlieferungen innerhalb Deutschlands.</p>
+                <p style="font-size: 12px; color: #94a3b8;">Kundensupport WhatsApp: +229 01 68 51 95 38</p>
             </div>
             <div class="footer-col">
-                <h3>Rechtliches & Schutz</h3>
+                <h3>Rechtliches & Datenschutz</h3>
                 <ul>
-                    <li><a href="#" onclick="alert('In Kürze verfügbar: Allgemeine Geschäftsbedingungen (AGB)')">AGB & Nutzungsbedingungen</a></li>
-                    <li><a href="#" onclick="alert('In Kürze verfügbar: Datenschutzrichtlinie gemäß GDPR/CCPA')">Datenschutz (GDPR)</a></li>
-                    <li><a href="#" onclick="alert('In Kürze verfügbar: Rechtliche Hinweise / Impressum')">Impressum & Legal</a></li>
+                    <li><a href="#" onclick="alert('Allgemeine Geschäftsbedingungen (AGB) für Deutschland')">AGB & Widerrufsrecht</a></li>
+                    <li><a href="#" onclick="alert('Datenschutzerklärung gemäß DSGVO')">Datenschutz (DSGVO)</a></li>
+                    <li><a href="#" onclick="alert('Impressum gemäß § 5 DDG')">Impressum</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h3>Zahlung & Logistik</h3>
+                <h3>Zahlung & Versand</h3>
                 <ul>
-                    <li><span>🇪🇺 SEPA Überweisung (Malta)</span></li>
-                    <li><span>🇺🇸 ACH / Wire Transfer (USD)</span></li>
-                    <li><span>📦 Global Supplier Direct</span></li>
+                    <li><span>🇩🇪 Versand mit DHL / Hermès</span></li>
+                    <li><span>🇪🇺 SEPA Überweisung (EUR)</span></li>
+                    <li><span>🔒 SSL 256-Bit Verschlüsselung</span></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Veltro Market. Alle Rechte vorbehalten. | Secure E-Commerce Infrastructure.</p>
+            <p>&copy; 2026 Veltro Market. Alle Rechte vorbehalten. | E-Commerce Deutschland.</p>
         </div>
     </footer>
 
-    <!-- Scripts JavaScript -->
+    <!-- Script JavaScript (Synchronisation data.json) -->
     <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // 1. Laden der Lieferanten
+                    const suppliersGrid = document.getElementById('suppliersGrid');
+                    if (suppliersGrid && data.suppliers) {
+                        suppliersGrid.innerHTML = data.suppliers.map(s => `
+                            <div class="supplier-card">
+                                <h4>${s.name} <span class="supplier-tag">${s.region}</span></h4>
+                                <p>${s.desc}</p>
+                                <div class="supplier-meta">✈️ Lieferzeit nach DE: ${s.delay}</div>
+                            </div>
+                        `).join('');
+                    }
+
+                    // 2. Laden der Produkte
+                    const productGrid = document.getElementById('productGrid');
+                    if (productGrid && data.products) {
+                        productGrid.innerHTML = data.products.map(p => `
+                            <div class="product-card">
+                                <img src="${p.image}" class="product-img" alt="${p.title}">
+                                <div class="product-info">
+                                    <div class="product-title">${p.title}</div>
+                                    <div class="product-price">${p.price}</div>
+                                    <div class="product-meta">Inkl. MwSt. zzgl. Versand • Quelle: ${p.supplier}</div>
+                                    <button class="btn-order" onclick="openCheckoutModal('${p.title}', '${p.price}')">In Deutschland bestellen</button>
+                                    <a href="https://wa.me/2290168519538?text=Hallo,%20ich%20habe%20eine%20Frage%20zum%20Produkt%20${encodeURIComponent(p.title)}" class="btn-support-wa" target="_blank">💬 Fragen per WhatsApp</a>
+                                </div>
+                            </div>
+                        `).join('');
+                    }
+                })
+                .catch(error => {
+                    console.error('Fehler beim Laden von data.json:', error);
+                    document.getElementById('productGrid').innerHTML = '<p style="color:red;">Fehler beim Laden der Produkte.</p>';
+                });
+        });
+
         function checkTracking() {
             const id = document.getElementById('trackingInput').value.trim();
             const res = document.getElementById('trackingResult');
@@ -313,15 +360,10 @@
                 return; 
             }
             res.style.display='block';
-            res.innerHTML = `<strong>Bestell-ID:</strong> ${id}<br><strong>Status:</strong> <span style="color:var(--success); font-weight:bold;">In Bearbeitung / Bei internationalem Lieferanten angefordert 🚚</span><br><span style="font-size:12px; color:var(--gray-text);">Reguläre Lieferzeit: 3 bis 7 Werktage je nach Destination.</span>`;
+            res.innerHTML = `<strong>Bestellnummer:</strong> ${id}<br><strong>Status:</strong> <span style="color:var(--success); font-weight:bold;">In Bearbeitung / Übergabe an DHL Deutschland 🚚</span><br><span style="font-size:12px; color:var(--gray-text);">Reguläre Lieferzeit in Deutschland: 2 bis 4 Werktage.</span>`;
         }
 
-        let selectedProduct = "";
-        let selectedPrice = "";
-
         function openCheckoutModal(name, price) {
-            selectedProduct = name;
-            selectedPrice = price;
             document.getElementById('modalProductName').innerText = "Bestellung: " + name;
             document.getElementById('modalProductPrice').innerText = 'Preis: ' + price;
             document.getElementById('orderForm').style.display = 'block';
@@ -329,34 +371,29 @@
             document.getElementById('checkoutModal').style.display = 'flex';
         }
 
-        function closeCheckoutModal() {
-            document.getElementById('checkoutModal').style.display = 'none';
+        function closeCheckoutModal() { 
+            document.getElementById('checkoutModal').style.display = 'none'; 
         }
 
         function submitOrder(e) {
             e.preventDefault();
-            
             const name = document.getElementById('clientName').value;
             const email = document.getElementById('clientEmail').value;
             const phone = document.getElementById('clientPhone').value;
-            const paymentMethod = document.getElementById('paymentMethod').value;
             
-            const randomId = 'VM-' + Math.floor(100000 + Math.random() * 900000);
+            const randomId = 'VM-DE-' + Math.floor(100000 + Math.random() * 900000);
             
-            // Simulation de l'automatisation multi-canal (Email, SMS, WhatsApp)
-            console.log(`[VELTRO MARKET AUTOMATION] Reçu généré pour ${name}`);
-            console.log(`-> Email envoyé à : ${email}`);
-            console.log(`-> SMS envoyé au : ${phone}`);
-            console.log(`-> Message WhatsApp envoyé au : ${phone}`);
+            console.log(`[VELTRO MARKET DE] Bestellung registriert für ${name}`);
+            console.log(`-> Kaufbeleg per Email gesendet an: ${email}`);
+            console.log(`-> SMS-Benachrichtigung gesendet an: ${phone}`);
 
             document.getElementById('orderForm').style.display = 'none';
             const successDiv = document.getElementById('orderSuccess');
             successDiv.style.display = 'block';
-            document.getElementById('generatedId').innerHTML = `Bestellnummer / Référence : <br><span style="font-size:20px; color:var(--primary); letter-spacing:1px;">${randomId}</span>`;
+            document.getElementById('generatedId').innerHTML = `Bestellnummer: <br><span style="font-size:20px; color:var(--primary); letter-spacing:1px;">${randomId}</span>`;
             
-            // Configuration du lien WhatsApp dynamique pré-rempli avec le reçu et la référence
-            const whatsappMsg = encodeURIComponent(`Bonjour, je souhaite finaliser ma commande ${randomId} (${selectedProduct} - ${selectedPrice}) avec le mode de paiement ${paymentMethod}. Merci de m'envoyer les instructions sécurisées.`);
-            document.getElementById('whatsappReceiptLink').href = `https://wa.me/2290168519538?text=${whatsappMsg}`;
+            const supportMsg = encodeURIComponent(`Hallo Support-Team, ich habe eine Frage zu meiner Bestellung ${randomId}.`);
+            document.getElementById('whatsappSupportLink').href = `https://wa.me/2290168519538?text=${supportMsg}`;
         }
     </script>
 </body>
